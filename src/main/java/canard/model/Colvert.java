@@ -1,9 +1,11 @@
 package canard.model;
 
+import canard.model.vol.VolerAvecDesAiles;
+
 public class Colvert extends Canard {
 	
 	public Colvert(String nom) {
-		super(nom);
+		super(nom, new VolerAvecDesAiles());
 	}
 
 	@Override

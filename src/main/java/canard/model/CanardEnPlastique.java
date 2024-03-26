@@ -1,9 +1,11 @@
 package canard.model;
 
+import canard.model.vol.NePasVoler;
+
 public class CanardEnPlastique extends Canard {
 	
 	public CanardEnPlastique(String nom) {
-		super(nom);
+		super(nom, new NePasVoler());
 	}
 
 	@Override
