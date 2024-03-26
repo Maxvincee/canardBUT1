@@ -12,7 +12,7 @@ public class Simulateur {
 
 		List<Canard> canards = mettreDesCanardsDansMonSimulateur();
 
-		faireAfficherNagerVoler(canards);
+		faireAfficherNagerVolerCancanner(canards);
 
 	}
 
@@ -25,7 +25,7 @@ public class Simulateur {
 		return canards;
 	}
 
-	private static void faireAfficherNagerVoler(List<Canard> canards) {
+	private static void faireAfficherNagerVolerCancanner(List<Canard> canards) {
 		System.out.println(LIGNE);
 		System.out.println("Afficher et Nager");
 		System.out.println(LIGNE);
@@ -34,6 +34,7 @@ public class Simulateur {
 			System.out.println(canard.getNom() + " : " + canard.afficher());
 			System.out.println(canard.nager());
 			System.out.println(canard.effectuerVol());
+			System.out.println(canard.effectuerCancan());
 		}
 	}
 
