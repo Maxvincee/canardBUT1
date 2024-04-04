@@ -11,7 +11,7 @@ public class PrototypeCanard extends Canard {
 
 	@Override
 	public String afficher() {
-		return "Je suis un prototype";
+		return "Je suis un prototype de canard";
 	}
 
 }

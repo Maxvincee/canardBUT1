@@ -26,6 +26,7 @@ class CanardTest {
 	Canard leurre;
 	Canard mandarin;
 	Canard canardPlastique;
+	
 
 	@BeforeEach
 	private void extracted() {
@@ -83,5 +84,26 @@ class CanardTest {
 
 		assertEquals("Rubber", canardPlastique.getNom());
 		assertEquals("Je suis un canard en plastique", canardPlastique.afficher());
+	}
+	
+	@Test
+	public void scénario_test() {
+		Canard colvert2 = new Colvert("Jean");
+		
+		assertEquals("Jean", colvert2.getNom());
+		assertEquals("Je suis un vrai colvert", colvert2.afficher());
+		assertEquals(NAGER, colvert2.nager());
+		assertEquals(CANCAN, colvert2.effectuerCancan());
+		assertEquals(VOLER, colvert2.effectuerVol());
+		
+		Canard prototype = new PrototypeCanard("Canatron");
+		
+		assertEquals("Canatron", prototype.getNom());
+		assertEquals("Je suis un prototype de canard", prototype.afficher());
+		assertEquals(NE_PAS_VOLER, prototype.effectuerVol());
+		
+		prototype.changerComportementVol(new PropulsionAReaction());
+		
+		assertEquals("Je vole avec un réacteur", prototype.effectuerVol());
 	}
 }

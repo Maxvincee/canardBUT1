@@ -4,7 +4,7 @@ public class PropulsionAReaction implements ComportementVol {
 
 	@Override
 	public String voler() {
-		return "Je vole avec une propulsion à réaction";
+		return "Je vole avec un réacteur";
 	}
 
 }
