@@ -8,14 +8,14 @@ public abstract class Canard {
 	protected final ComportementVol comportementVol;
 	protected final ComportementCancan comportementCancan;
 	
-	public Canard (String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {
+	protected Canard (String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {
 		this.nom = nom;
 		this.comportementVol = comportementVol;
 		this.comportementCancan = comportementCancan;
 	}
 	
 	public String nager() {
-		return "Tous les canards flottent , même les leurres !";
+		return "Tous les canards flottent, même les leurres !";
 	}
 	
 	public abstract String afficher();

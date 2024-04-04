@@ -4,7 +4,7 @@ public class CanardMuet implements ComportementCancan {
 
 	@Override
 	public String cancanner() {
-		return "....Silence....";
+		return "...Silence...";
 	}
 
 }
