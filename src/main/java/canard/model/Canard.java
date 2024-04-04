@@ -5,8 +5,8 @@ import canard.model.vol.ComportementVol;
 
 public abstract class Canard {
 	private final String nom;
-	protected final ComportementVol comportementVol;
-	protected final ComportementCancan comportementCancan;
+	protected ComportementVol comportementVol;
+	protected ComportementCancan comportementCancan;
 	
 	protected Canard (String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {
 		this.nom = nom;
@@ -30,5 +30,13 @@ public abstract class Canard {
 	
 	public String effectuerCancan() {
 		return this.comportementCancan.cancanner();
+	}
+	
+	public void changerComportementVol(ComportementVol comportementVol) {
+		this.comportementVol = comportementVol;
+	}
+	
+	public void changerComportementCancan(ComportementCancan comportementCancan) {
+		this.comportementCancan = comportementCancan;
 	}
 }

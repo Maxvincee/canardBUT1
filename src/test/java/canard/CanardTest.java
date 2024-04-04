@@ -2,9 +2,13 @@ package canard;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.net.ssl.SSLPeerUnverifiedException;
+
 import org.junit.jupiter.api.Test;
 
 import canard.model.*;
+import canard.model.cancan.*;
+import canard.model.vol.*;
 
 import org.junit.jupiter.api.BeforeEach;
 
@@ -40,6 +44,8 @@ class CanardTest {
 
 		assertEquals(NE_PAS_VOLER, leurre.effectuerVol());
 		assertEquals(NE_PAS_VOLER, canardPlastique.effectuerVol());
+		
+		mandarin.changerComportementVol(new NePasVoler());
 	}
 
 	@Test
@@ -50,6 +56,8 @@ class CanardTest {
 
 		assertEquals(SILENCE, leurre.effectuerCancan());
 		assertEquals(COINCOIN, canardPlastique.effectuerCancan());
+		
+		canardPlastique.changerComportementCancan(new Cancan());
 	}
 
 	@Test
